@@ -10,8 +10,8 @@ const Skills = dynamic(() => import('./components/Skills/Skills'))
 const Mask = dynamic(() => import('./components/Mask/Mask'))
 const Contact = dynamic(() => import('./components/Contact/Contact'))
 
-export default function Home({products}) {
-  // console.log(products);
+export default function Home({  }) {
+  
   return (
     <>
     <Header/>
@@ -44,24 +44,5 @@ export default function Home({products}) {
   )
 }
 
-// export  async function getServerSideProps(context) {
-  
-//   const client = createClient({
-//     projectId: 'ybmah2ji',
-//     dataset: 'production',
-//     apiVersion: '2021-05-21', // Update to the latest API version
-//     useCdn: false, // Enable CDN caching
-//   });
-    
-//   const query = `*[_type == "portfolio"]`
-    
-//   const products = await client.fetch(query);  
-//   return {
-//     props: {
-//        products
-//     },
-//   };
-  
-//   }
 
 

@@ -86,7 +86,9 @@ const Column = ({images, y}) => {
       {
         images.map( (src, i) => {
           return <div key={i} className='relative rounded-[1vw] overflow-hidden '>
-            <img 
+            <Image
+            width={800}
+            height={800} 
               src={`/${src}`}
               alt='image'
               className='object-cover'
@@ -98,13 +100,3 @@ const Column = ({images, y}) => {
   )
 }
 
-// .imageContainer{
-//     height: 100%;
-//     width: 100%;
-//     position: relative;
-//     border-radius: 1vw;
-//     overflow: hidden;
-//     img{
-//         object-fit: cover;
-//     }
-// }

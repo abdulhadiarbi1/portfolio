@@ -9,7 +9,7 @@ const Comp = ({src , Title , Percentage}) => {
             {Title}
         </div>
         <div className='flex text-center group-hover:hidden'>
-    <img src={src} alt='icon' className='h-auto w-auto  my-2   object-fill  transition-all '/>
+    <Image src={src} alt='icon' width={300} height={200} className='h-auto w-auto  my-2   object-fill  transition-all '/>
         </div>
     </div>
   )

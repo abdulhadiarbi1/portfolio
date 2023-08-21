@@ -25,4 +25,10 @@ export const Images = [
     {
         src : '/9.jpg'
     },
+    {
+        src : '/10.jpg'
+    },
+    {
+        src : '/11.jpg'
+    },
 ]
