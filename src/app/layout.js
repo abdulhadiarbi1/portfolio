@@ -1,4 +1,6 @@
 import './globals.css'
+import { Analytics } from '@vercel/analytics/react';
+import ChatwoptWidget from './components/ChatWoot'
 import Providers from './components/DarkMode/provider' 
 import { Montserrat } from 'next/font/google'
 const montserrat = Montserrat({ subsets: ['latin'], })
@@ -17,6 +19,8 @@ export default function RootLayout({ children }) {
       <Providers>
         {children}
         </Providers>
+        <Analytics />
+        <ChatwoptWidget/>
         </body>
       
 

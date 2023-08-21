@@ -17,8 +17,7 @@ const images = [
   "8.jpg",
   "9.jpg",
   "10.jpg",
-  "11.jpg",
-  "12.png",
+  "11.jpg"
 ]
 
 export default function Design() {
@@ -92,6 +91,7 @@ const Column = ({images, y}) => {
               src={`/${src}`}
               alt='image'
               className='object-cover'
+              
             />
           </div>
         })
