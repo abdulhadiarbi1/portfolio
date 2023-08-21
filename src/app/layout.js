@@ -20,7 +20,9 @@ export default function RootLayout({ children }) {
         {children}
         </Providers>
         <Analytics />
+        <div className='hidden sm:block'>
         <ChatwoptWidget/>
+        </div>
         </body>
       
 
