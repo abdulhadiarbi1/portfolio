@@ -7,8 +7,8 @@ export default function Mask() {
     const container = useRef(null);
     const stickyMask = useRef(null);
 
-    const initialMaskSize = .8;
-    const targetMaskSize = 30;
+    const initialMaskSize = .4;
+    const targetMaskSize = 50;
     const easing = 0.15;
     let easedScrollProgress = 0;
 

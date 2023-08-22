@@ -1,7 +1,11 @@
+"use client";
 import Header from './components/Header/Index'
 import Mobile from './components/Header/MobileNav/Mobile';
 import dynamic from 'next/dynamic';
 import MobileDesgin from './components/My Design/MobileDesgin';
+import { VideoReveal } from "./components/VideoReveal";
+import { useState } from "react";
+
 
 const Products = dynamic(() => import('./components/Products/Products'))
 const ProductMobile = dynamic(() => import('./components/Products/ProductMobile'))
@@ -11,9 +15,13 @@ const Mask = dynamic(() => import('./components/Mask/Mask'))
 const Contact = dynamic(() => import('./components/Contact/Contact'))
 
 export default function Home({  }) {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   
   return (
     <>
+    {isVideoPlaying ? (
+        <VideoReveal onVideoEnd={() => setIsVideoPlaying(false)} />
+      ) : null}
     <Header/>
     <Mobile/>
     <div className='pb-[600px]'></div>

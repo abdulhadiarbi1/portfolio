@@ -11,7 +11,7 @@ const Skills = () => {
         <div className='flex gap-4 overflow-hidden'>
 
           <motion.div initial={{ x: -100 }} whileInView={{ x: 0 }} transition={{ duration: 1 }} className='grid grid-cols-2 gap-3'>
-            <Comp src={'/next.png'} Percentage={80} Title={'NextJS'} />
+            <Comp src={'/next.svg'} Percentage={80} Title={'NextJS'} />
             <Comp src={'/react.png'} Percentage={80} Title={'ReactJS'} />
             <Comp src={'/js.png'} Percentage={80} Title={'js'} />
             <Comp src={'/css.png'} Percentage={80} Title={'CSS'} />
