@@ -16,9 +16,8 @@ const Skills = dynamic(() => import('./components/Skills/Skills'))
 const Mask = dynamic(() => import('./components/Mask/Mask'))
 const Contact = dynamic(() => import('./components/Contact/Contact'))
 
-export default function Home({ pets }) {
+export default function Home() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
-  console.log(pets);
   return (
     <>
     {isVideoPlaying ? (

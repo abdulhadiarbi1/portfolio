@@ -10,11 +10,12 @@ const ProductMobile = () => {
       <Title Tagline={'MOVE YOUR MOUSE FOR SCALING'} Heading={'Projects'} />
       <div className='flex justify-center sm:hidden mt-10 '>
         <div className='flex flex-col'>
-          {projects?.map((data, id) => {
+          {projects?.map((data) => {
             return (
-              <Link ref={data.link}><div key={id} className='mb-5'>
+              <Link href={data.link} key={data.id}>
+                <div className='mb-5'>
                 <Image src={`/${data.src}`} alt={data.name} height={400} width={400} />
-                <div className='flex justify-between px-2 mt-2'>
+                <div key={data.id} className='flex justify-between px-2 mt-2'>
                   <h1 className='font-bold uppercase'>{data.name}</h1>
                   <p className='text-xs mt-[2px]'>{data.year}</p>
                 </div>

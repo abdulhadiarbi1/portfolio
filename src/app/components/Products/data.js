@@ -1,5 +1,6 @@
 export const projects = [
     {
+        id:1,
         name: "Google Pixel Creator Labs",
         client: "Grow",
         description: "A partnership between Google & SN37.",
@@ -8,6 +9,7 @@ export const projects = [
         link:'/Project'
     },
     {
+        id:2,
         name: "MAVEN 11",
         client: "analogueagency",
         description: "New web design for the blockchain investment fund Maven 11.",
@@ -16,6 +18,7 @@ export const projects = [
         link:'/Project'
     },
     {
+        id:3,
         name: "Decimal",
         client: "Decimal",
         description: "Portfolio site for Decimal.",
@@ -25,6 +28,7 @@ export const projects = [
     },
     
     {
+        id:4,
         name: "Wix Playground Homepage",
         client: "Wix Playground",
         description: "Wix Playground is powered by the Wix.com design team.",
@@ -33,6 +37,7 @@ export const projects = [
         link:'/Project'
     },
     {
+        id:5,
         name: "POWELL—STUDIO",
         client: "POWELL—STUDIO",
         description: "The online presence for Powell—Studio.",
@@ -41,6 +46,7 @@ export const projects = [
         link:'/Project'
     },
     {
+        id:6,
         name: "ROCKETPANDA",
         client: "ET Studio",
         description: "An Italian animation studio.",
@@ -49,6 +55,7 @@ export const projects = [
         link:'/Project'
     },
     {
+        id:7,
         name: "C2 Montreal",
         client: "Ingamana",
         description: "C2 Montréal is Canada's premier creative-business event.",
@@ -57,6 +64,7 @@ export const projects = [
         link:'/Project'
     },
     {
+        id:8,
         name: "Design Is Funny",
         client: "Shader Studio",
         description: "Funny is the design work of Daniele Buffa.",
