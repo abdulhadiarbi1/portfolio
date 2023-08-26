@@ -5,9 +5,11 @@ import styles from './style.module.scss'
 import Title from '../Title';
 const Products = () => {
   return (
-    <div>
+    <div className='cursor-all-scroll'>
+      
        <Title Tagline={'move your mouse for scaling'} Heading={'projects'}/>
         <div className={styles.gallery}>
+
         <ProductCard projects={[projects[0], projects[1]]}/>
         <ProductCard projects={[projects[2], projects[3]]} reversed={true}/>
         <ProductCard projects={[projects[4], projects[5]]}/>

@@ -1,10 +1,12 @@
 "use client";
-import Header from './components/Header/Index'
-import Mobile from './components/Header/MobileNav/Mobile';
 import dynamic from 'next/dynamic';
 import MobileDesgin from './components/My Design/MobileDesgin';
 import { VideoReveal } from "./components/VideoReveal";
 import { useState } from "react";
+import Neon from './components/Neon';
+import { createClient } from 'next-sanity';
+import Mobile from './components/Header/MobileNav/Mobile';
+import Header from './components/Header/Index'
 
 
 const Products = dynamic(() => import('./components/Products/Products'))
@@ -14,15 +16,16 @@ const Skills = dynamic(() => import('./components/Skills/Skills'))
 const Mask = dynamic(() => import('./components/Mask/Mask'))
 const Contact = dynamic(() => import('./components/Contact/Contact'))
 
-export default function Home({  }) {
+export default function Home({ pets }) {
   const [isVideoPlaying, setIsVideoPlaying] = useState(true);
-  
+  console.log(pets);
   return (
     <>
     {isVideoPlaying ? (
         <VideoReveal onVideoEnd={() => setIsVideoPlaying(false)} />
       ) : null}
-    <Header/>
+      <div className=''>
+      <Header writing={true}/>
     <Mobile/>
     <div className='pb-[600px]'></div>
     <div className='hidden sm:block'>
@@ -41,6 +44,8 @@ export default function Home({  }) {
     <Contact/>
     <div className='mt-32'></div>
     <div className='mt-32'></div>
+    
+    </div>
 
     
    
@@ -50,6 +55,22 @@ export default function Home({  }) {
 
     </>
   )
+}
+
+export async function getServerSideProps(context) {
+  const client = createClient({
+    projectId: "mgrr3fa7",
+    dataset: "production",
+    useCdn: true
+  });
+
+  const query = `*[_type == "Pet"]`;
+  const pets = await client.fetch(query);
+  return {
+    props: {
+      pets
+    }
+  }
 }
 
 

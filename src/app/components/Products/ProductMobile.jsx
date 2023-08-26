@@ -3,6 +3,7 @@ import React from 'react'
 import { projects } from './data';
 import Image from 'next/image';
 import Title from '../Title';
+import Link from 'next/link';
 const ProductMobile = () => {
   return (
     <div className='sm:hidden'>
@@ -11,7 +12,7 @@ const ProductMobile = () => {
         <div className='flex flex-col'>
           {projects?.map((data, id) => {
             return (
-              <div key={id} className='mb-5'>
+              <Link ref={data.link}><div key={id} className='mb-5'>
                 <Image src={`/${data.src}`} alt={data.name} height={400} width={400} />
                 <div className='flex justify-between px-2 mt-2'>
                   <h1 className='font-bold uppercase'>{data.name}</h1>
@@ -19,6 +20,7 @@ const ProductMobile = () => {
                 </div>
                 <p className='text-sm px-2'>{data.description}</p>
               </div>
+              </Link>
             )
           })}
         </div>

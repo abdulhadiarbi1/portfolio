@@ -35,7 +35,7 @@ export default function Navbar() {
   
 
     return (
-      <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className={`${styles.menu} w-screen sm:w-auto`} >
+      <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className={`${styles.menu} w-screen sm:w-auto  z-50`} >
          <div className={styles.body}>
               <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
                       <div className={styles.header}>

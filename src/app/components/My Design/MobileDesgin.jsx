@@ -28,7 +28,7 @@ const MobileDesgin = () => {
     }
   };
   return (
-    <div className='lg:hidden block mt-28 overflow-hidden'>
+    <div className='lg:hidden block mt-28 overflow-hidden cursor-grab'>
       <div className='mb-16'>
       <Title Tagline={'swipe to see new designs'} Heading={'designs'} />
       </div>

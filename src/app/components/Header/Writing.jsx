@@ -3,7 +3,7 @@ import Typewriter from 'typewriter-effect';
 
 const Writing = () => {
   return (
-    <div className='text-xl font-bold mt-6'>
+    <div className='text-xl font-bold mt-6 z-50'>
         <Typewriter
   options={{
     strings: ['Abdul Hadi'],

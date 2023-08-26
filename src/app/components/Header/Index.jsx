@@ -6,7 +6,7 @@ import Navbar from './Nav/Navbar';
 import { usePathname } from 'next/navigation';
 import Writing from './Writing';
 import ThemeButton from '../DarkMode/ThemeButton';
-export default function Index() {
+export default function Index({writing}) {
 
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
@@ -17,13 +17,13 @@ export default function Index() {
 
   return (
     <div className='flex justify-between sm:justify-between px-10 mb-10'>
-      <Writing />
+      {writing && <Writing />}
       <div className='sm:hidden mt-5'>      
         <ThemeButton/>
         </div>
 
       
-      <div className={`${styles.main} hidden sm:block`}>
+      <div className={`${styles.main} hidden sm:block `}>
       
         <div className={styles.header}>
           <div onClick={() => { setIsActive(!isActive) }} className={styles.button}>

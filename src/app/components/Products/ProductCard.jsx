@@ -2,7 +2,7 @@
 import styles from './style.module.scss';
 import Image from 'next/image';
 import { useRef } from 'react'; 
-
+import Link from 'next/link';
 export default function ProductCard({projects, reversed}) {
 
     const firstImage = useRef(null);
@@ -46,13 +46,13 @@ export default function ProductCard({projects, reversed}) {
       <div onMouseMove={(e) => {manageMouseMove(e)}} className={styles.double}>
   
         <div ref={firstImage} className={styles.imageContainer}>
-          <div className={styles.stretchyWrapper}>
+          <Link href={'/Project'}><div className={styles.stretchyWrapper}>
             <Image 
               src={`/${projects[0].src}`}
               fill={true}
               alt={"image"}
             />
-          </div>
+          </div></Link>
           <div className={styles.body}>
               <h3 className='uppercase'>{projects[0].name}</h3>
               <p>{projects[0].description}</p>
@@ -61,13 +61,13 @@ export default function ProductCard({projects, reversed}) {
         </div>
   
         <div ref={secondImage} className={styles.imageContainer}>
-          <div className={styles.stretchyWrapper}>
+          <Link href={'/Project'}><div className={styles.stretchyWrapper}>
             <Image 
               src={`/${projects[1].src}`}
               fill={true}
               alt={"image"}
             />
-          </div>
+          </div></Link>
           <div className={styles.body}>
               <h3 className='uppercase'>{projects[1].name}</h3>
               <p>{projects[1].description}</p>

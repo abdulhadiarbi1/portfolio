@@ -57,7 +57,7 @@ export default function Design() {
   }, [])
 
   return (
-    <main className={styles.main}>
+    <main className={`cursor-n-resize ${styles.main}`}>
       <div className={styles.spacer}>
         <div className='pt-32 mt-32'>
         <Title Tagline={'scroll down to see new designs'} Heading={'designs'}/>

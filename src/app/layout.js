@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react';
 import ChatwoptWidget from './components/ChatWoot'
 import Providers from './components/DarkMode/provider' 
 import { Montserrat } from 'next/font/google'
+
 const montserrat = Montserrat({ subsets: ['latin'], })
 
 export const metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
     
       <body className={montserrat.className}>
       <Providers>
+     
         {children}
         </Providers>
         <Analytics />
