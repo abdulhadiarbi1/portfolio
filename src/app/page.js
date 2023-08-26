@@ -3,8 +3,6 @@ import dynamic from 'next/dynamic';
 import MobileDesgin from './components/My Design/MobileDesgin';
 import { VideoReveal } from "./components/VideoReveal";
 import { useState } from "react";
-import Neon from './components/Neon';
-import { createClient } from 'next-sanity';
 import Mobile from './components/Header/MobileNav/Mobile';
 import Header from './components/Header/Index'
 

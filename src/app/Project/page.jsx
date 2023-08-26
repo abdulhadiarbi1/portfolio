@@ -78,7 +78,7 @@ const page = () => {
             user experience.
           </p>
         </div>
-        <div className="flex justify-center mt-16 w-screen bg-[#f0efefbb]">
+        <div className="flex justify-center mt-16 w-screen">
           <div className="flex flex-col sm:gap-16 sm:flex-row ">
             <Image src={"/m1.png"} alt="desktop" width={250} height={250} />
             <Image src={"/m2.png"} alt="desktop" width={250} height={250} />
