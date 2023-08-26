@@ -57,21 +57,21 @@ export default function Home({ pets }) {
   )
 }
 
-export async function getServerSideProps(context) {
-  const client = createClient({
-    projectId: "mgrr3fa7",
-    dataset: "production",
-    useCdn: true
-  });
+{ /* export async function getServerSideProps(context) {
+    const client = createClient({
+      projectId: "mgrr3fa7",
+      dataset: "production",
+      useCdn: true
+    });
 
-  const query = `*[_type == "Pet"]`;
-  const pets = await client.fetch(query);
-  return {
-    props: {
-      pets
+    const query = `*[_type == "Pet"]`;
+    const pets = await client.fetch(query);
+    return {
+      props: {
+        pets
+      }
     }
-  }
-}
+  }*/}
 
 
 
